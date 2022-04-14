@@ -262,11 +262,11 @@ fun buy(
 
 fun fill(add: Add, inTheCoffeeMachine: InTheCoffeeMachine) {
     println("Write how many ml of water do you want to add:")
-    add.addWater = readLine()!!.toInt()
+    add.addWater = readln().toInt()
     inTheCoffeeMachine.waterInTheCoffeeMachine = inTheCoffeeMachine.waterInTheCoffeeMachine + add.addWater
 
     println("Write how many ml of milk do you want to add:")
-    add.addMilk = readLine()!!.toInt()
+    add.addMilk = readln().toInt()
     inTheCoffeeMachine.milkInTheCoffeeMachine = inTheCoffeeMachine.milkInTheCoffeeMachine + add.addMilk
 
     println("Write how many grams of coffee beans do you want to add:")
