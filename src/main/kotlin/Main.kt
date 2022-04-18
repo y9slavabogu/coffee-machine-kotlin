@@ -206,11 +206,11 @@ fun buy(
 
         if (enough.enoughOfEverything) {
             if (input.sortOfCoffeeInput == "1") {
-                inTheCoffeeMachine.waterInTheCoffeeMachine = inTheCoffeeMachine.waterInTheCoffeeMachine - forEspresso.waterForEspresso
-                inTheCoffeeMachine.milkInTheCoffeeMachine = inTheCoffeeMachine.milkInTheCoffeeMachine - forEspresso.milkForEspresso
-                inTheCoffeeMachine.beansInTheCoffeeMachine = inTheCoffeeMachine.beansInTheCoffeeMachine - forEspresso.beansForEspresso
-                inTheCoffeeMachine.cupsInTheCoffeeMachine = inTheCoffeeMachine.cupsInTheCoffeeMachine - forEspresso.cupForEspresso
-                inTheCoffeeMachine.moneyInTheCoffeeMachine = inTheCoffeeMachine.moneyInTheCoffeeMachine + forEspresso.costOfEspresso
+                inTheCoffeeMachine.waterInTheCoffeeMachine - forEspresso.waterForEspresso
+                inTheCoffeeMachine.milkInTheCoffeeMachine - forEspresso.milkForEspresso
+                inTheCoffeeMachine.beansInTheCoffeeMachine - forEspresso.beansForEspresso
+                inTheCoffeeMachine.cupsInTheCoffeeMachine - forEspresso.cupForEspresso
+                inTheCoffeeMachine.moneyInTheCoffeeMachine + forEspresso.costOfEspresso
 
                 enough.enoughWater = false
                 enough.enoughMilk = false
@@ -221,11 +221,11 @@ fun buy(
             }
 
             if (input.sortOfCoffeeInput == "2") {
-                inTheCoffeeMachine.waterInTheCoffeeMachine = inTheCoffeeMachine.waterInTheCoffeeMachine - forLatte.waterForLatte
-                inTheCoffeeMachine.milkInTheCoffeeMachine = inTheCoffeeMachine.milkInTheCoffeeMachine - forLatte.milkForLatte
-                inTheCoffeeMachine.beansInTheCoffeeMachine = inTheCoffeeMachine.beansInTheCoffeeMachine - forLatte.beansForLatte
-                inTheCoffeeMachine.cupsInTheCoffeeMachine = inTheCoffeeMachine.cupsInTheCoffeeMachine - forLatte.cupForLatte
-                inTheCoffeeMachine.moneyInTheCoffeeMachine = inTheCoffeeMachine.moneyInTheCoffeeMachine + forLatte.costOfLatte
+                inTheCoffeeMachine.waterInTheCoffeeMachine - forLatte.waterForLatte
+                inTheCoffeeMachine.milkInTheCoffeeMachine - forLatte.milkForLatte
+                inTheCoffeeMachine.beansInTheCoffeeMachine - forLatte.beansForLatte
+                inTheCoffeeMachine.cupsInTheCoffeeMachine - forLatte.cupForLatte
+                inTheCoffeeMachine.moneyInTheCoffeeMachine + forLatte.costOfLatte
 
                 enough.enoughWater = false
                 enough.enoughMilk = false
@@ -236,11 +236,11 @@ fun buy(
             }
 
             if (input.sortOfCoffeeInput == "3") {
-                inTheCoffeeMachine.waterInTheCoffeeMachine = inTheCoffeeMachine.waterInTheCoffeeMachine - forCappuccino.waterForCappuccino
-                inTheCoffeeMachine.milkInTheCoffeeMachine = inTheCoffeeMachine.milkInTheCoffeeMachine - forCappuccino.milkForCappuccino
-                inTheCoffeeMachine.beansInTheCoffeeMachine = inTheCoffeeMachine.beansInTheCoffeeMachine - forCappuccino.beansForCappuccino
-                inTheCoffeeMachine.cupsInTheCoffeeMachine = inTheCoffeeMachine.cupsInTheCoffeeMachine - forCappuccino.cupForCappuccino
-                inTheCoffeeMachine.moneyInTheCoffeeMachine = inTheCoffeeMachine.moneyInTheCoffeeMachine + forCappuccino.costOfCappuccino
+                inTheCoffeeMachine.waterInTheCoffeeMachine - forCappuccino.waterForCappuccino
+                inTheCoffeeMachine.milkInTheCoffeeMachine - forCappuccino.milkForCappuccino
+                inTheCoffeeMachine.beansInTheCoffeeMachine - forCappuccino.beansForCappuccino
+                inTheCoffeeMachine.cupsInTheCoffeeMachine - forCappuccino.cupForCappuccino
+                inTheCoffeeMachine.moneyInTheCoffeeMachine + forCappuccino.costOfCappuccino
 
                 enough.enoughWater = false
                 enough.enoughMilk = false
@@ -263,19 +263,19 @@ fun buy(
 fun fill(add: Add, inTheCoffeeMachine: InTheCoffeeMachine) {
     println("Write how many ml of water do you want to add:")
     add.addWater = readln().toInt()
-    inTheCoffeeMachine.waterInTheCoffeeMachine = inTheCoffeeMachine.waterInTheCoffeeMachine + add.addWater
+    inTheCoffeeMachine.waterInTheCoffeeMachine + add.addWater
 
     println("Write how many ml of milk do you want to add:")
     add.addMilk = readln().toInt()
-    inTheCoffeeMachine.milkInTheCoffeeMachine = inTheCoffeeMachine.milkInTheCoffeeMachine + add.addMilk
+    inTheCoffeeMachine.milkInTheCoffeeMachine + add.addMilk
 
     println("Write how many grams of coffee beans do you want to add:")
     add.addBeans = readln().toInt()
-    inTheCoffeeMachine.beansInTheCoffeeMachine = inTheCoffeeMachine.beansInTheCoffeeMachine + add.addBeans
+    inTheCoffeeMachine.beansInTheCoffeeMachine + add.addBeans
 
     println("Write how many disposable cups do you want to add:")
     add.addCups = readln().toInt()
-    inTheCoffeeMachine.cupsInTheCoffeeMachine = inTheCoffeeMachine.cupsInTheCoffeeMachine + add.addCups
+    inTheCoffeeMachine.cupsInTheCoffeeMachine + add.addCups
 }
 
 fun take(inTheCoffeeMachine: InTheCoffeeMachine) {
